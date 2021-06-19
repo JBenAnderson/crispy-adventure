@@ -68,7 +68,7 @@ function Withdraw() {
                   } else {
                     function calculate() {
                       let intWithdraw = parseInt(withdraw);
-                      let initialValue = balance;
+                      let initialValue = parseInt(balance);
 
                       {
                         {

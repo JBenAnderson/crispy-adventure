@@ -67,7 +67,9 @@ function Deposit() {
                   } else {
                     function calculate() {
                       let intDeposit = parseInt(deposit);
-                      let initialValue = balance;
+                      let initialValue = parseInt(balance);
+                      console.log(intDeposit);
+                      console.log(initialValue);
 
                       {
                         {
