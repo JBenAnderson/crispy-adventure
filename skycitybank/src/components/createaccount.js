@@ -1,6 +1,6 @@
 import React from "react";
-import { UserContext, Card } from "./card";
-
+import Card from "./card";
+import { UserContext } from "../App";
 function CreateAccount() {
   const [show, setShow] = React.useState(true);
   const [status, setStatus] = React.useState("");

@@ -1,5 +1,6 @@
 import React from "react";
-import { UserContext, Card } from "./card";
+import Card from "./card";
+import { UserContext } from "../App";
 function Withdraw() {
   const [withdraw, setWithdraw] = React.useState(0);
   const [disabled, setDisabled] = React.useState(true);

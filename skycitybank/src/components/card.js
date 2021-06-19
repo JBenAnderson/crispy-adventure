@@ -4,7 +4,7 @@ import React from "react";
 // const Route = ReactRouterDOM.Route; //gain access to route
 // const Link = ReactRouterDOM.Link; //gain access to link
 // const HashRouter = ReactRouterDOM.HashRouter; //gain access to router
-const UserContext = React.createContext(null); //gain access to context
+//const UserContext = React.createContext(null); //gain access to context
 
 function Card(props) {
   function classes() {
@@ -26,4 +26,4 @@ function Card(props) {
     </div>
   );
 }
-export { Card, UserContext };
+export default Card;

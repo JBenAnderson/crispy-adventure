@@ -1,10 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import HashRouter from "react-router-dom";
-import ReactRouterDOM from "react-router-dom";
+
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+//import HashRouter from "react-router-dom";
+
 import NavBar from "./components/navbar";
 import Home from "./components/home";
 import CreateAccount from "./components/createaccount";
@@ -49,14 +49,12 @@ function App() {
             ],
           }}
         >
-          <Switch id="nav-link">
-            <Route path="/" exact component={Home} />
-            <Route path="/CreateAccount/" component={CreateAccount} />
-            <Route path="/alldata/" component={AllData} />
-            <Route path="/login/" component={Login} />
-            <Route path="/deposit/" component={Deposit} />
-            <Route path="/withdraw/" component={Withdraw} />
-          </Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/CreateAccount/" component={CreateAccount} />
+          <Route path="/alldata/" component={AllData} />
+          <Route path="/login/" component={Login} />
+          <Route path="/deposit/" component={Deposit} />
+          <Route path="/withdraw/" component={Withdraw} />
         </UserContext.Provider>
       </Router>
     </>
@@ -64,3 +62,4 @@ function App() {
 }
 
 export default App;
+export { UserContext };

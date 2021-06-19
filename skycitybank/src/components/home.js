@@ -1,5 +1,5 @@
 import React from "react";
-import { UserContext, Card } from "./card";
+import Card from "./card";
 function Home() {
   return (
     <div className="container">
