@@ -1,25 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-
-const renderTooltip = (props) => {
-  const tooltipArray = [
-    "Return Home",
-    "First time users click here!",
-    "User login info",
-    "Click to make a Deposit",
-    "Click to make a Withdrawal",
-    "All user(s) information",
-  ];
-
-  return (
-    <Tooltip id="nav-tooltip" {...props}>
-      Return Home
-    </Tooltip>
-  );
-};
+const tooltipArray = [
+  "Return Home",
+  "First time users click here!",
+  "User login info",
+  "Click to make a Deposit",
+  "Click to make a Withdrawal",
+  "All user(s) information",
+];
 
 function NavBar() {
   return (
@@ -27,7 +18,7 @@ function NavBar() {
       <OverlayTrigger
         placement="bottom"
         delay={{ show: 250, hide: 400 }}
-        overlay={renderTooltip}
+        overlay={<Tooltip id="nav-tooltip">Return Home</Tooltip>}
       >
         <a
           id="home"
@@ -48,86 +39,116 @@ function NavBar() {
         </a>
       </OverlayTrigger>
 
-      <a
-        id="createAccount"
-        className="nav-link"
-        href="#/CreateAccount/"
-        onClick={(e) => {
-          e.currentTarget.className = "nav-link active";
-
-          document.querySelector("#home").className = "nav-link";
-          document.querySelector("#login").className = "nav-link";
-          document.querySelector("#deposit").className = "nav-link";
-          document.querySelector("#withdraw").className = "nav-link";
-          document.querySelector("#alldata").className = "nav-link";
-        }}
+      <OverlayTrigger
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={<Tooltip id="nav-tooltip">Create or add an account</Tooltip>}
       >
-        Create Account
-      </a>
-      <a
-        id="login"
-        className="nav-link"
-        href="#/login/"
-        onClick={(e) => {
-          e.currentTarget.className = "nav-link active";
+        <a
+          id="createAccount"
+          className="nav-link"
+          href="#/CreateAccount/"
+          onClick={(e) => {
+            e.currentTarget.className = "nav-link active";
 
-          document.querySelector("#home").className = "nav-link";
-          document.querySelector("#createAccount").className = "nav-link";
-          document.querySelector("#deposit").className = "nav-link";
-          document.querySelector("#withdraw").className = "nav-link";
-          document.querySelector("#alldata").className = "nav-link";
-        }}
+            document.querySelector("#home").className = "nav-link";
+            document.querySelector("#login").className = "nav-link";
+            document.querySelector("#deposit").className = "nav-link";
+            document.querySelector("#withdraw").className = "nav-link";
+            document.querySelector("#alldata").className = "nav-link";
+          }}
+        >
+          Create Account
+        </a>
+      </OverlayTrigger>
+      <OverlayTrigger
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={<Tooltip id="nav-tooltip">login information</Tooltip>}
       >
-        Login
-      </a>
-      <a
-        id="deposit"
-        className="nav-link"
-        href="#/deposit"
-        onClick={(e) => {
-          e.currentTarget.className = "nav-link active";
+        <a
+          id="login"
+          className="nav-link"
+          href="#/login/"
+          onClick={(e) => {
+            e.currentTarget.className = "nav-link active";
 
-          document.querySelector("#home").className = "nav-link";
-          document.querySelector("#createAccount").className = "nav-link";
-          document.querySelector("#login").className = "nav-link";
-          document.querySelector("#withdraw").className = "nav-link";
-          document.querySelector("#alldata").className = "nav-link";
-        }}
+            document.querySelector("#home").className = "nav-link";
+            document.querySelector("#createAccount").className = "nav-link";
+            document.querySelector("#deposit").className = "nav-link";
+            document.querySelector("#withdraw").className = "nav-link";
+            document.querySelector("#alldata").className = "nav-link";
+          }}
+        >
+          Login
+        </a>
+      </OverlayTrigger>
+      <OverlayTrigger
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={<Tooltip id="nav-tooltip">Make a Deposit</Tooltip>}
       >
-        Deposit
-      </a>
-      <a
-        id="withdraw"
-        className="nav-link"
-        href="#/withdraw/"
-        onClick={(e) => {
-          e.currentTarget.className = "nav-link active";
+        <a
+          id="deposit"
+          className="nav-link"
+          href="#/deposit"
+          onClick={(e) => {
+            e.currentTarget.className = "nav-link active";
 
-          document.querySelector("#home").className = "nav-link";
-          document.querySelector("#createAccount").className = "nav-link";
-          document.querySelector("#login").className = "nav-link";
-          document.querySelector("#deposit").className = "nav-link";
-          document.querySelector("#alldata").className = "nav-link";
-        }}
+            document.querySelector("#home").className = "nav-link";
+            document.querySelector("#createAccount").className = "nav-link";
+            document.querySelector("#login").className = "nav-link";
+            document.querySelector("#withdraw").className = "nav-link";
+            document.querySelector("#alldata").className = "nav-link";
+          }}
+        >
+          Deposit
+        </a>
+      </OverlayTrigger>
+      <OverlayTrigger
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={<Tooltip id="nav-tooltip">Make a Withdrawal</Tooltip>}
       >
-        Withdraw
-      </a>
-      <a
-        id="alldata"
-        className="nav-link"
-        href="#/alldata/"
-        onClick={(e) => {
-          e.currentTarget.className = "nav-link active";
+        <a
+          id="withdraw"
+          className="nav-link"
+          href="#/withdraw/"
+          onClick={(e) => {
+            e.currentTarget.className = "nav-link active";
 
-          document.querySelector("#home").className = "nav-link";
-          document.querySelector("#createAccount").className = "nav-link";
-          document.querySelector("#login").className = "nav-link";
-          document.querySelector("#deposit").className = "nav-link";
-          document.querySelector("#withdraw").className = "nav-link";
-        }}
+            document.querySelector("#home").className = "nav-link";
+            document.querySelector("#createAccount").className = "nav-link";
+            document.querySelector("#login").className = "nav-link";
+            document.querySelector("#deposit").className = "nav-link";
+            document.querySelector("#alldata").className = "nav-link";
+          }}
+        >
+          Withdraw
+        </a>
+      </OverlayTrigger>
+      <OverlayTrigger
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={<Tooltip id="nav-tooltip">All User Information</Tooltip>}
       >
-        AllData
-      </a>
+        <a
+          id="alldata"
+          className="nav-link"
+          href="#/alldata/"
+          onClick={(e) => {
+            e.currentTarget.className = "nav-link active";
+
+            document.querySelector("#home").className = "nav-link";
+            document.querySelector("#createAccount").className = "nav-link";
+            document.querySelector("#login").className = "nav-link";
+            document.querySelector("#deposit").className = "nav-link";
+            document.querySelector("#withdraw").className = "nav-link";
+          }}
+        >
+          AllData
+        </a>
+      </OverlayTrigger>
     </nav>
   );
 }
