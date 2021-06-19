@@ -3,7 +3,6 @@ import Card from "./card";
 import { UserContext } from "../App";
 function Login() {
   const ctx = React.useContext(UserContext);
-  console.log(ctx);
 
   const login = JSON.stringify(ctx.users[ctx.users.length - 1].name);
   console.log(login);

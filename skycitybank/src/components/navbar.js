@@ -1,24 +1,53 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import Button from "react-bootstrap/Button";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+
+const renderTooltip = (props) => {
+  const tooltipArray = [
+    "Return Home",
+    "First time users click here!",
+    "User login info",
+    "Click to make a Deposit",
+    "Click to make a Withdrawal",
+    "All user(s) information",
+  ];
+
+  return (
+    <Tooltip id="nav-tooltip" {...props}>
+      Return Home
+    </Tooltip>
+  );
+};
+
 function NavBar() {
   return (
     <nav className="nav nav-pills nav-fill">
-      <a
-        id="home"
-        className="nav-link"
-        aria-current="page"
-        href="#/"
-        onClick={(e) => {
-          e.currentTarget.className = "nav-link active";
-
-          document.querySelector("#createAccount").className = "nav-link";
-          document.querySelector("#login").className = "nav-link";
-          document.querySelector("#deposit").className = "nav-link";
-          document.querySelector("#withdraw").className = "nav-link";
-          document.querySelector("#alldata").className = "nav-link";
-        }}
+      <OverlayTrigger
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={renderTooltip}
       >
-        Front-End Bank Home
-      </a>
+        <a
+          id="home"
+          className="nav-link"
+          aria-current="page"
+          href="#/"
+          onClick={(e) => {
+            e.currentTarget.className = "nav-link active";
+
+            document.querySelector("#createAccount").className = "nav-link";
+            document.querySelector("#login").className = "nav-link";
+            document.querySelector("#deposit").className = "nav-link";
+            document.querySelector("#withdraw").className = "nav-link";
+            document.querySelector("#alldata").className = "nav-link";
+          }}
+        >
+          Front-End Bank Home
+        </a>
+      </OverlayTrigger>
+
       <a
         id="createAccount"
         className="nav-link"
