@@ -1,7 +1,5 @@
 import React from "react";
 function NavBar() {
-  const [disabled, setDisabled] = React.useState("nav-link");
-
   return (
     <nav className="nav nav-pills nav-fill">
       <a
