@@ -48,13 +48,14 @@ body {
 
 .card-body {
   text-align: center;
-  background-color: rgb(136, 136, 136);
+  background-color: rgb(108, 108, 108);
 }
 
 .card {
   background-color: rgb(116, 223, 223);
   box-shadow: 5px 5px #0000009c;
-  background: rgb(63, 94, 251);
+  overflow: hidden;
+
   background: radial-gradient(
     circle,
     rgba(63, 94, 251, 1) 0%,
@@ -65,21 +66,38 @@ body {
   align-content: center;
 }
 
-.container {
-  width: 1200px;
-  height: 550px;
-}
-
 #balanceField {
   text-shadow: 2px 2px #000000;
-  color: rgb(52, 255, 52);
+  color: rgb(21, 255, 21);
 }
 
 #loginField {
   text-shadow: 2px 2px #000000;
-  color: yellow;
+  color: rgb(255, 255, 139);
 }
 
 #myTable {
   background-color: rgba(255, 255, 255, 0.228);
+}
+
+.sliding-background {
+  background: url("./clouds.png") repeat-x;
+  background-position: top;
+  background-size: contain;
+  height: 250px;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
+.container {
+  overflow: hidden;
 }
