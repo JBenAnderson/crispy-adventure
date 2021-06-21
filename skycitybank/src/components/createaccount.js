@@ -45,7 +45,7 @@ function CreateAccount() {
   }
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="card align-items-center">
         <Card
           header="Create Account"
@@ -129,6 +129,7 @@ function CreateAccount() {
             )
           }
         />
+        <div className="sliding-background"></div>
       </div>
     </div>
   );

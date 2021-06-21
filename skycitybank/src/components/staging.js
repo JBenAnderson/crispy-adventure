@@ -1,11 +1,6 @@
-import React from "react";
-import Users from "./users";
-import { UserContext } from "../App";
-function AllData() {
-  let ctx = React.useContext(UserContext);
-
-  return (
-    <div className="container-fluid">
+return (
+  <div className="card align-items-center">
+    <div className="container">
       <div className="card align-items-center">
         <table id="myTable" className="table table-striped">
           <thead>
@@ -27,6 +22,5 @@ function AllData() {
         <div className="sliding-background"></div>
       </div>
     </div>
-  );
-}
-export default AllData;
+  </div>
+);

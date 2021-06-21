@@ -10,7 +10,7 @@ function Deposit() {
   const currentUser = ctx.users[ctx.users.length - 1];
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="card align-items-center">
         <Card
           header="Deposit Funds"
@@ -88,6 +88,7 @@ function Deposit() {
             </>
           }
         />
+        <div className="sliding-background"></div>
       </div>
     </div>
   );

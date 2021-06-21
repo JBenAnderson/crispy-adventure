@@ -7,7 +7,7 @@ function Login() {
   const login = JSON.stringify(ctx.users[ctx.users.length - 1].name);
   console.log(login);
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="card align-items-center">
         <Card
           txtcolor="white"
@@ -29,6 +29,7 @@ function Login() {
             </>
           }
         />
+        <div className="sliding-background"></div>
       </div>
     </div>
   );
