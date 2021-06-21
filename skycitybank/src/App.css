@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,6 +17,9 @@
   color: #61dafb;
 }
 
+.card {
+  height: 3300px;
+}
 .card-header {
   font-size: x-large !important;
   text-align: center;
@@ -65,9 +63,9 @@
 
 .sliding-background {
   background: url("./clouds.png") repeat-x;
-  background-position: bottom;
+  background-position: top;
   background-size: contain;
-  height: 325px;
+  height: 725px;
   width: 5076px;
   animation: slide 60s linear infinite;
 }
@@ -81,15 +79,19 @@
   }
 }
 
-.container {
+.container-fluid {
   overflow: hidden;
-}
-
-.card-align-items-center {
-  width: 100%;
-  background-color: black;
 }
 
 #body {
   background: rgb(254, 255, 239);
+}
+
+#card-align-items-center {
+  min-height: 750px;
+  max-height: 750px;
+}
+
+#button {
+  margin-top: 5px;
 }

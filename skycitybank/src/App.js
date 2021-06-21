@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 
-import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 //import HashRouter from "react-router-dom";
 
 import NavBar from "./components/navbar";
@@ -63,3 +63,4 @@ function App() {
 
 export default App;
 export { UserContext };
+//export { NavLink };

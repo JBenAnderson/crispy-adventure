@@ -12,7 +12,7 @@ function Withdraw() {
 
   return (
     <div className="container-fluid">
-      <div className="card align-items-center">
+      <div className="card align-items-center" id="card-align-items-center">
         <Card
           header="Withdraw Funds"
           title={

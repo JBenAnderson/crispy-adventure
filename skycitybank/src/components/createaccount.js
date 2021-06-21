@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./card";
 import { UserContext } from "../App";
+
 function CreateAccount() {
   const [show, setShow] = React.useState(true);
   const [status, setStatus] = React.useState("");
@@ -46,7 +47,7 @@ function CreateAccount() {
 
   return (
     <div className="container-fluid">
-      <div className="card align-items-center">
+      <div className="card align-items-center" id="card-align-items-center">
         <Card
           header="Create Account"
           status={status}
@@ -57,9 +58,10 @@ function CreateAccount() {
                   src="clipboard.png"
                   className="img-fluid"
                   alt="Responsive image"
+                  width="70%"
                 />
-                Name
                 <br />
+                Enter your name
                 <input
                   type="input"
                   className="form-control"
@@ -69,8 +71,7 @@ function CreateAccount() {
                   onChange={(e) => setName(e.currentTarget.value)}
                 />
                 <br />
-                Email Address
-                <br />
+                Enter your email address
                 <input
                   type="input"
                   className="form-control"
@@ -80,7 +81,7 @@ function CreateAccount() {
                   onChange={(e) => setEmail(e.currentTarget.value)}
                 />
                 <br />
-                Password
+                Create a password
                 <br />
                 <input
                   type="password"
@@ -91,12 +92,13 @@ function CreateAccount() {
                   onChange={(e) => setPassword(e.currentTarget.value)}
                 />
                 <br />
-                Initial Deposit Amount?
+                How much are you depositing?
                 <br />
                 <div className="input-group mb-3">
                   <span className="input-group-text">$</span>
                   <input
                     id="deposit"
+                    placeholder="0"
                     value={deposit}
                     type="number"
                     className="form-control"
@@ -105,12 +107,12 @@ function CreateAccount() {
                   />
                   <span className="input-group-text">.00</span>
                 </div>
-                <br />
-                <br />
                 <button
+                  id="button"
                   type="submit"
                   className="btn btn-light"
                   onClick={handleCreate}
+                  line-height="50px"
                 >
                   Create Account
                 </button>

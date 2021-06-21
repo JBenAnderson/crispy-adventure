@@ -6,7 +6,7 @@ function AllData() {
 
   return (
     <div className="container-fluid">
-      <div className="card align-items-center">
+      <div className="card align-items-center" id="card-align-items-center">
         <table id="myTable" className="table table-striped">
           <thead>
             <tr>
