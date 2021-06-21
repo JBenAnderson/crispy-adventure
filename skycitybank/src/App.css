@@ -84,7 +84,7 @@ body {
   background: url("./clouds.png") repeat-x;
   background-position: top;
   background-size: contain;
-  height: 250px;
+  height: 200px;
   width: 5076px;
   animation: slide 60s linear infinite;
 }

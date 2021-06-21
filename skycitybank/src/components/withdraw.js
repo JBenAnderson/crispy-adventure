@@ -65,6 +65,10 @@ function Withdraw() {
                       "You cannot enter a negative number here.  If you would like to make a deposit, please visit the Deposit Page."
                     );
                     setWithdraw(0);
+                  } else if (parseInt(balance) - parseInt(withdraw) < 0) {
+                    alert(
+                      "You cannot withdraw more money than your current available balance."
+                    );
                   } else {
                     function calculate() {
                       let intWithdraw = parseInt(withdraw);
