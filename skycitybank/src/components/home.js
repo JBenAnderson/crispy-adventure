@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./card";
+import { NavLink } from "react-router-dom";
 //import { NavLink } from "../App";
 function Home() {
   return (
@@ -20,10 +21,25 @@ function Home() {
               />
               <div>
                 <br />
+                <NavLink to="/CreateAccount/">
+                  <button
+                    type="submit"
+                    className="btn btn-light"
+                    onClick={(e) => {
+                      document.querySelector("#createAccount").className =
+                        "nav-link active";
 
-                <button type="submit" className="btn btn-light">
-                  Click Here To Start!
-                </button>
+                      document.querySelector("#home").className = "nav-link";
+                      document.querySelector("#login").className = "nav-link";
+                      document.querySelector("#deposit").className = "nav-link";
+                      document.querySelector("#withdraw").className =
+                        "nav-link";
+                      document.querySelector("#alldata").className = "nav-link";
+                    }}
+                  >
+                    Click Here To Start!
+                  </button>
+                </NavLink>
               </div>
             </>
           }
