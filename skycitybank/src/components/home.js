@@ -37,7 +37,7 @@ function Home() {
                       document.querySelector("#alldata").className = "nav-link";
                     }}
                   >
-                    Click Here To Start!
+                    Click Here To Start
                   </button>
                 </NavLink>
               </div>

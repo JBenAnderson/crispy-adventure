@@ -119,9 +119,17 @@ function CreateAccount() {
               </>
             ) : (
               <>
-                <h5>Success</h5>
+                <h3>Success!</h3>
+                <img
+                  src="success.png"
+                  className="img-fluid"
+                  alt="Responsive image"
+                  width="100%"
+                />
+
                 <button
                   type="submit"
+                  id="button"
                   className="btn btn-light"
                   onClick={clearForm}
                 >
