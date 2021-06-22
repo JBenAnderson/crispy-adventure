@@ -18,11 +18,8 @@ function CreateAccount() {
       setStatus("Error: " + label);
       setTimeout(() => setStatus(""), 3000);
       return false;
-    } else if (password.length <= 7) {
-      setStatus("Error: " + "password is too short");
-      setTimeout(() => setStatus(""), 3000);
-      return false;
     }
+
     return true;
   }
 
