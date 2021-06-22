@@ -9,7 +9,11 @@ function Home() {
         <Card
           txtcolor="white"
           header="SKY CITY BANK"
-          title="Welcome!  Please create an account to begin."
+          title={
+            <>
+              <h4>"Welcome to Sky City Bank!</h4>
+            </>
+          }
           text=""
           body={
             <>
@@ -40,6 +44,7 @@ function Home() {
                     Click Here To Start
                   </button>
                 </NavLink>
+                <div id="valueBusiness">We value your business</div>
               </div>
             </>
           }

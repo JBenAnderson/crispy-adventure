@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .App-link {
@@ -18,13 +18,15 @@
 }
 
 .card {
-  height: 3400px;
+  height: 3500px;
 }
 .card-header {
-  font-size: x-large !important;
+  font-size: xx-large;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-shadow: 2px 2px #000000;
-  background-color: rgb(116, 223, 223) !important;
+  background-color: rgb(70, 252, 250) !important;
+  color: rgb(255, 255, 255);
 }
 
 .card-body {
@@ -49,7 +51,7 @@
 
 #balanceField {
   text-shadow: 2px 2px #000000;
-  color: rgb(21, 255, 21);
+  color: rgb(0, 255, 115);
 }
 
 #loginField {
@@ -93,8 +95,13 @@
 }
 
 #button {
-  margin-top: 5px;
+  margin-top: -6px;
 }
 #buttonSuccess {
   margin-top: 30px;
+}
+#valueBusiness {
+  margin-top: 3px;
+  font-size: x-small;
+  color: rgb(255, 255, 139);
 }
