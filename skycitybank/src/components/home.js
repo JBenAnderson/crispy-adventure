@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./card";
 import { NavLink } from "react-router-dom";
+import SlidingBackground from "./slidingBackground";
 //import { NavLink } from "../App";
 function Home() {
   return (
@@ -50,7 +51,7 @@ function Home() {
           }
         />
 
-        <div className="sliding-background"></div>
+        <SlidingBackground />
       </div>
     </div>
   );

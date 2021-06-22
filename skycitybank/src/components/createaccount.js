@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./card";
 import { UserContext } from "../App";
+import SlidingBackground from "./slidingBackground";
 
 function CreateAccount() {
   const [show, setShow] = React.useState(true);
@@ -139,7 +140,7 @@ function CreateAccount() {
             )
           }
         />
-        <div className="sliding-background"></div>
+        <SlidingBackground />
       </div>
     </div>
   );
