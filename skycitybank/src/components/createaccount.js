@@ -136,7 +136,7 @@ function CreateAccount() {
 
                 <button
                   type="submit"
-                  id="button"
+                  id="successButton"
                   className="btn btn-light"
                   onClick={clearForm}
                 >
