@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./card";
 import { UserContext } from "../App";
+import SlidingBackground from "./slidingBackground";
 function Login() {
   const ctx = React.useContext(UserContext);
 
@@ -29,7 +30,7 @@ function Login() {
             </>
           }
         />
-        <div className="sliding-background"></div>
+        <SlidingBackground />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-
+import SlidingBackground from "./components/slidingBackground";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 //import HashRouter from "react-router-dom";
 
@@ -12,6 +12,7 @@ import AllData from "./components/alldata";
 import Login from "./components/login";
 import Deposit from "./components/deposit";
 import Withdraw from "./components/withdraw";
+
 //Card component and router library
 //const Route = ReactRouterDOM.Route; //gain access to route
 //const Link = ReactRouterDOM.Link; //gain access to link
@@ -32,12 +33,14 @@ function App() {
                 name: "John Smith",
                 password: "rubyred1",
                 balance: 588,
+                transactions: ["+ $550 ", "+ $25 ", "+ $25 ", "- $13 "],
               },
               {
                 email: "peterparker@mit.edu",
                 name: "Peter Parker",
                 password: "spidey2099",
                 balance: 1207,
+                transactions: ["+ $1,250 ", "- $43 "],
               },
 
               {
@@ -45,6 +48,7 @@ function App() {
                 name: "Bruce Wayne",
                 password: "batfan77",
                 balance: 126704,
+                transactions: ["+ $120,000 ", "+ $6,704 "],
               },
             ],
           }}
@@ -56,6 +60,7 @@ function App() {
           <Route path="/deposit/" component={Deposit} />
           <Route path="/withdraw/" component={Withdraw} />
         </UserContext.Provider>
+        <div className="container-fluid" id="slider"></div>
       </Router>
     </>
   );

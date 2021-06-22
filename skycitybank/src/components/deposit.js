@@ -1,11 +1,13 @@
 import React from "react";
 import Card from "./card";
 import { UserContext } from "../App";
+import SlidingBackground from "./slidingBackground";
 function Deposit() {
   const [deposit, setDeposit] = React.useState(0);
   const [disabled, setDisabled] = React.useState(true);
   const ctx = React.useContext(UserContext);
-
+  const transactions = ctx.users[ctx.users.length - 1].transactions;
+  console.log(transactions);
   const balance = ctx.users[ctx.users.length - 1].balance;
   const currentUser = ctx.users[ctx.users.length - 1];
 
@@ -74,6 +76,12 @@ function Deposit() {
                       {
                         {
                           currentUser.balance = initialValue + intDeposit;
+                          currentUser.transactions +=
+                            "+" +
+                            " " +
+                            "$" +
+                            new Intl.NumberFormat().format(intDeposit);
+                          alert("deposit accepted!");
                           setDeposit(0);
                         }
                       }
@@ -88,7 +96,7 @@ function Deposit() {
             </>
           }
         />
-        <div className="sliding-background"></div>
+        <SlidingBackground />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import Users from "./users";
 import { UserContext } from "../App";
+import SlidingBackground from "./slidingBackground";
 function AllData() {
   let ctx = React.useContext(UserContext);
 
@@ -14,6 +15,7 @@ function AllData() {
               <th scope="col">Name</th>
               <th scope="col">Password</th>
               <th scope="col">Balance</th>
+              <th scope="col">Transactions</th>
             </tr>
           </thead>
 
@@ -24,7 +26,7 @@ function AllData() {
           </tbody>
         </table>
 
-        <div className="sliding-background"></div>
+        <SlidingBackground />
       </div>
     </div>
   );

@@ -4,13 +4,14 @@ function Users() {
   let ctx = React.useContext(UserContext);
   let form = [];
 
-  function getUsers(email, name, password, balance) {
+  function getUsers(email, name, password, balance, transactions) {
     for (let i = 0; i < ctx.users.length; i++) {
       email = ctx.users[i].email;
       name = ctx.users[i].name;
       password = ctx.users[i].password;
       balance = ctx.users[i].balance;
       balance = new Intl.NumberFormat().format(balance);
+      transactions = ctx.users[i].transactions;
 
       form.push([
         <tr key="tablerow">
@@ -18,6 +19,7 @@ function Users() {
           <th key="name">{JSON.stringify(name)}</th>
           <th key="password">{password}</th>
           <th key="balance">${balance}</th>
+          <th key="transactions">{transactions}</th>
         </tr>,
       ]);
     }

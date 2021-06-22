@@ -1,11 +1,12 @@
 import React from "react";
 import Card from "./card";
 import { UserContext } from "../App";
+import SlidingBackground from "./slidingBackground";
 function Withdraw() {
   const [withdraw, setWithdraw] = React.useState(0);
   const [disabled, setDisabled] = React.useState(true);
   const ctx = React.useContext(UserContext);
-
+  const transactions = ctx.users[ctx.users.length - 1].transactions;
   const balance = ctx.users[ctx.users.length - 1].balance;
 
   const currentUser = ctx.users[ctx.users.length - 1];
@@ -77,6 +78,12 @@ function Withdraw() {
                       {
                         {
                           currentUser.balance = initialValue - intWithdraw;
+                          currentUser.transactions +=
+                            "-" +
+                            " " +
+                            "$" +
+                            new Intl.NumberFormat().format(intWithdraw);
+                          alert("withdrawal accepted!");
                           setWithdraw(0);
                         }
                       }
@@ -91,7 +98,7 @@ function Withdraw() {
             </>
           }
         />
-        <div className="sliding-background"></div>
+        <SlidingBackground />
       </div>
     </div>
   );

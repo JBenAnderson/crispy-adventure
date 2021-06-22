@@ -12,7 +12,7 @@ function CreateAccount() {
   const [deposit, setDeposit] = React.useState("");
 
   const ctx = React.useContext(UserContext);
-
+  const transactions = ctx.users.transactions;
   function validate(field, label) {
     if (!field) {
       setStatus("Error: " + label);
@@ -33,6 +33,8 @@ function CreateAccount() {
       name,
       password,
       balance: deposit,
+      transactions:
+        ["+" + " " + "$" + new Intl.NumberFormat().format(deposit)] + " ",
     });
 
     setShow(false);
