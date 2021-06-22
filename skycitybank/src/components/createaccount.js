@@ -12,10 +12,14 @@ function CreateAccount() {
   const [deposit, setDeposit] = React.useState("");
 
   const ctx = React.useContext(UserContext);
-  const transactions = ctx.users.transactions;
+
   function validate(field, label) {
     if (!field) {
       setStatus("Error: " + label);
+      setTimeout(() => setStatus(""), 3000);
+      return false;
+    } else if (password.length <= 7) {
+      setStatus("Error: " + "password is too short");
       setTimeout(() => setStatus(""), 3000);
       return false;
     }

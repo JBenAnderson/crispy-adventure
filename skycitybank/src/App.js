@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import SlidingBackground from "./components/slidingBackground";
+
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 //import HashRouter from "react-router-dom";
 

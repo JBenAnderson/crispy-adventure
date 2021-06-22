@@ -3,14 +3,6 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-const tooltipArray = [
-  "Return Home",
-  "First time users click here!",
-  "User login info",
-  "Click to make a Deposit",
-  "Click to make a Withdrawal",
-  "All user(s) information",
-];
 
 function NavBar() {
   return (
@@ -35,7 +27,7 @@ function NavBar() {
             document.querySelector("#alldata").className = "nav-link";
           }}
         >
-          Front-End Bank Home
+          Sky City Bank Home
         </a>
       </OverlayTrigger>
 
