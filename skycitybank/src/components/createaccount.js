@@ -15,7 +15,7 @@ function CreateAccount() {
 
   function validate(field, label) {
     if (!field) {
-      setStatus("Error: " + label);
+      setStatus("Error: " + label + " " + "empty");
       setTimeout(() => setStatus(""), 3000);
       return false;
     }
@@ -25,7 +25,7 @@ function CreateAccount() {
 
   function validateEmail(field, label) {
     if (!field) {
-      setStatus("Error: " + label);
+      setStatus("Error: " + label + " " + "empty");
       setTimeout(() => setStatus(""), 3000);
       return false;
     } else {
@@ -35,9 +35,25 @@ function CreateAccount() {
           return true;
         }
       }
-      setStatus("Error: " + label);
+      setStatus("Error: " + label + " " + "not valid format");
       setTimeout(() => setStatus(""), 3000);
       return false;
+    }
+
+    return true;
+  }
+
+  function validatePassword(field, label, length) {
+    if (!field) {
+      setStatus("Error: " + label + " " + "empty");
+      setTimeout(() => setStatus(""), 3000);
+      return false;
+    } else {
+      if (field.length < 8) {
+        setStatus("Error: " + label + " " + "less than 8 characters");
+        setTimeout(() => setStatus(""), 3000);
+        return false;
+      }
     }
 
     return true;
@@ -47,7 +63,7 @@ function CreateAccount() {
     console.log(name, email, password);
     if (!validate(name, "name")) return;
     if (!validateEmail(email, "email")) return;
-    if (!validate(password, "password")) return;
+    if (!validatePassword(password, "password")) return;
     if (!validate(deposit, "deposit")) return;
     ctx.users.push({
       email,
