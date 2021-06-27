@@ -23,10 +23,30 @@ function CreateAccount() {
     return true;
   }
 
+  function validateEmail(field, label) {
+    if (!field) {
+      setStatus("Error: " + label);
+      setTimeout(() => setStatus(""), 3000);
+      return false;
+    } else {
+      for (let i = 0; i < field.length; i++) {
+        let char = field[i];
+        if (char == ("@" && ".")) {
+          return true;
+        }
+      }
+      setStatus("Error: " + label);
+      setTimeout(() => setStatus(""), 3000);
+      return false;
+    }
+
+    return true;
+  }
+
   function handleCreate() {
     console.log(name, email, password);
     if (!validate(name, "name")) return;
-    if (!validate(email, "email")) return;
+    if (!validateEmail(email, "email")) return;
     if (!validate(password, "password")) return;
     if (!validate(deposit, "deposit")) return;
     ctx.users.push({
