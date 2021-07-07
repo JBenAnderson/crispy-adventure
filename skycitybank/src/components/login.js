@@ -10,9 +10,10 @@ function Login() {
 
   function logout() {
     let loginForm = document.getElementById("loginForm");
-    ctx.users = [];
+    let loginField = document.getElementById("loginField");
 
     loginForm.className = "visible";
+    loginField.innerHTML = "";
   }
 
   return (
