@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./card";
 import { UserContext } from "../App";
 import SlidingBackground from "./slidingBackground";
+import NavBar from "./navbar";
 function Login() {
   const ctx = React.useContext(UserContext);
 
@@ -11,9 +12,16 @@ function Login() {
   function logout() {
     let loginForm = document.getElementById("loginForm");
     let loginField = document.getElementById("loginField");
-
+    let loginImage = document.getElementById("loginImage");
+    loginImage.src = "piggyBank.png";
     loginForm.className = "visible";
     loginField.innerHTML = "";
+    document.querySelector("#deposit").className = "nav-link disabled";
+    document.querySelector("#withdraw").className = "nav-link disabled";
+    document.querySelector("#alldata").className = "nav-link disabled";
+    document.getElementById("logoutDiv").className = "invisible";
+    document.getElementById("logoutText").innerHTML =
+      "Please login or visit the Create Account Page.";
   }
 
   return (
@@ -27,12 +35,13 @@ function Login() {
             <>
               <div>
                 <img
+                  id="loginImage"
                   src="locked.png"
                   className="img-fluid"
                   alt="Responsive image"
                 />
               </div>
-              <div>
+              <div id="loginField">
                 You are logged in as:
                 <h3 id="loginField">{login}</h3>
               </div>
@@ -67,23 +76,28 @@ function Login() {
                 <button
                   type="button"
                   className="btn btn-light"
-                  id="logoutButton"
+                  id="submitButton"
                 >
                   Submit
                 </button>
               </div>
               <br />
               <br />
-
-              <div>Not you? Please</div>
-              <button
-                type="button"
-                className="btn btn-warning"
-                id="logoutButton"
-                onClick={logout}
-              >
-                logout
-              </button>
+              <div>
+                <div id="logoutText" className="visible">
+                  Not you? Please
+                </div>
+                <div id="logoutDiv" className="visible">
+                  <button
+                    type="button"
+                    className="btn btn-warning"
+                    id="logoutButton"
+                    onClick={logout}
+                  >
+                    logout
+                  </button>
+                </div>
+              </div>
             </>
           }
         />
