@@ -55,8 +55,8 @@
 }
 
 #loginField {
-  text-shadow: 2px 2px 4px #000000;
-  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px #000000;
+  color: rgb(255, 255, 139);
 }
 
 #myTable {
