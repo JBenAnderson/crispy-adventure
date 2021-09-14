@@ -20,11 +20,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
+      - run: npm install
         working-directory: skycitybank
-        run: |
-          npm install
 
       - run: npm run build --if-present
+        working-directory: skycitybank
 
       - run: npm test
