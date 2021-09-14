@@ -27,3 +27,4 @@ jobs:
         working-directory: skycitybank
 
       - run: npm test
+        working-directory: skycitybank
