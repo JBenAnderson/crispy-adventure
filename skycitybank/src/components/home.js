@@ -12,7 +12,7 @@ function Home() {
           header="SKY CITY BANK"
           title={
             <>
-              <h4>"Welcome to Sky City Bank!</h4>
+              <h4>Welcome to Sky City Bank!</h4>
             </>
           }
           text=""
