@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.card {
+  height: 3500px;
+}
+.card-header {
+  font-size: x-large;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px #000000;
+  background-color: rgb(70, 252, 250) !important;
+  color: rgb(255, 255, 255);
+}
+
+.card-body {
+  text-align: center;
+  background-color: rgb(108, 108, 108);
+}
+
+.card {
+  background-color: rgb(116, 223, 223);
+  box-shadow: 5px 5px #0000009c;
+  overflow: hidden;
+
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(70, 252, 250, 1) 100%
+  );
+
+  display: flex;
+  align-content: center;
+}
+
+#balanceField {
+  text-shadow: 2px 2px #000000;
+  color: rgb(0, 255, 115);
+}
+
+#loginField {
+  text-shadow: 2px 2px 4px #000000;
+  color: rgb(255, 255, 255);
+}
+
+#myTable {
+  background-color: rgba(255, 255, 255, 0.228);
+}
+
+.sliding-background {
+  background: url("./clouds.png") repeat-x;
+  background-position: top;
+  background-size: contain;
+  height: 725px;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
+.container-fluid {
+  overflow: hidden;
+}
+
+#body {
+  background: rgb(254, 255, 239);
+}
+
+#card-align-items-center {
+  min-height: 750px;
+  max-height: 750px;
+}
+
+#button {
+  margin-top: -6px;
+}
+
+#successButton {
+  margin-top: 30px;
+}
+#valueBusiness {
+  margin-top: 3px;
+  font-size: x-small;
+  color: rgb(255, 255, 139);
+}
+
+#slider {
+  margin-bottom: -30000px;
+}
